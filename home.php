@@ -339,7 +339,7 @@ while ($row_query = $result_query->fetch(PDO::FETCH_ASSOC)) {
         }, function(err) {
             if (err) {
                 console.log(err);
-                return
+                return'
             }
             console.log("Initialization finished. Ready to start");
             Quagga.start();
@@ -351,7 +351,7 @@ while ($row_query = $result_query->fetch(PDO::FETCH_ASSOC)) {
             // result.innerHTML = data.codeResult.code;
         });
     </script>
-    
+
     <!--Menu-->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: darkgreen; color: #ffffff;"> <!-- #353130 -->
         <a class="navbar-brand" href="#" style="margin-left: 1%;"><img src="img/<?php echo $logo ?>" alt="<?php echo $nomeempresa ?>"></a>
