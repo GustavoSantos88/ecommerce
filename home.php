@@ -322,35 +322,6 @@ while ($row_query = $result_query->fetch(PDO::FETCH_ASSOC)) {
 </style>
 
 <body>
-    <div id="resultado"></div>
-    <div id="camera"></div>
-
-    <script src="js/quagga.min.js"></script>
-    <script>
-        Quagga.init({
-            inputStream: {
-                name: "Live",
-                type: "LiveStream",
-                target: document.querySelector('#camera') // Or '#yourElement' (optional)
-            },
-            decoder: {
-                readers: ["code_128_reader"]
-            }
-        }, function(err) {
-            if (err) {
-                console.log(err);
-                return'
-            }
-            console.log("Initialization finished. Ready to start");
-            Quagga.start();
-        });
-
-        Quagga.onDetected(function(data) {
-            //  console.log(data);
-            var result = document.querySelector('#resultado').innerHTML = data.codeResult.code;
-            // result.innerHTML = data.codeResult.code;
-        });
-    </script>
 
     <!--Menu-->
     <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: darkgreen; color: #ffffff;"> <!-- #353130 -->
